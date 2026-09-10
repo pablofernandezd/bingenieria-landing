@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B Ingeniería — Mantenimiento multimarca y continuidad operacional</title>
+<meta name="description" content="Mantenimiento de equipos industriales y médicos, outsourcing de personal técnico, insumos y repuestos, obras civiles y logística. Multimarca, certificado ISO 9001, atención 24/7 en todo Chile.">
+<link rel="canonical" href="https://www.bingenieria.cl/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CL">
+<meta property="og:title" content="B Ingeniería — Respaldo operativo">
+<meta property="og:description" content="Si sostenemos un pabellón, sostenemos tu planta. Mantenimiento multimarca certificado, 24/7, en todo Chile.">
+<meta property="og:url" content="https://www.bingenieria.cl/">
+<meta name="theme-color" content="#FF6514">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23142833'/%3E%3Cpath d='M11 8h7a4.5 4.5 0 010 9h-7zM11 17h7.6a4.7 4.7 0 010 9.4H11z' fill='%23FF6514'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --ink:#141B20; --ink-2:#4A555C; --ink-3:#77848B;
+    --orange:#FF6514; --orange-d:#E0530A; --orange-soft:#FFF1E8;
+    --deep:#142833; --deep-2:#1E3A4A;
+    --cyan:#00B0F0;
+    --paper:#FFFFFF; --grey:#F6F6F6; --line:#E3E8EB;
+    --wrap:1120px; --r:14px;
+    --shadow:0 1px 2px rgba(20,40,51,.05), 0 14px 34px -14px rgba(20,40,51,.2);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0; background:var(--paper); color:var(--ink);
+    font:400 17px/1.62 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased; text-wrap:pretty}
+  h1,h2,h3{line-height:1.14; letter-spacing:-.02em; margin:0; text-wrap:balance; font-weight:650}
+  h1{font-size:clamp(2.05rem,1.2rem + 3.4vw,3.5rem); letter-spacing:-.03em}
+  h2{font-size:clamp(1.55rem,1.1rem + 1.9vw,2.4rem)}
+  h3{font-size:1.1rem}
+  p{margin:0}
+  a{color:inherit}
+  img{max-width:100%}
+  .wrap{max-width:var(--wrap); margin-inline:auto; padding-inline:22px}
+  .eyebrow{font-size:.775rem; font-weight:650; letter-spacing:.13em; text-transform:uppercase; color:var(--orange-d)}
+  .lede{font-size:clamp(1.04rem,.98rem + .4vw,1.26rem); color:var(--ink-2)}
+  section{padding:clamp(58px,7vw,100px) 0}
+  .stack>*+*{margin-top:18px}
+  .muted{color:var(--ink-3); font-size:.88rem}
+
+  header{position:sticky; top:0; z-index:50; background:rgba(255,255,255,.9); backdrop-filter:blur(10px); border-bottom:1px solid var(--line)}
+  .nav{display:flex; align-items:center; gap:26px; height:68px}
+  .logo{display:flex; align-items:center; gap:10px; text-decoration:none; font-weight:700; letter-spacing:-.01em; font-size:1.02rem; white-space:nowrap}
+  .logo svg{display:block; flex:none}
+  .logo i{font-style:normal; font-weight:500; color:var(--ink-3)}
+  .nav nav{margin-left:auto; display:flex; gap:24px}
+  .nav nav a{text-decoration:none; color:var(--ink-2); font-size:.95rem; font-weight:500}
+  .nav nav a:hover{color:var(--orange-d)}
+  @media (max-width:900px){ .nav nav{display:none} }
+  .cta-corto{display:none}
+  @media (max-width:560px){
+    .nav{gap:10px; height:62px}
+    .logo{font-size:.94rem; gap:8px}
+    .logo svg{width:26px;height:26px}
+    .logo i{display:none}
+    .nav .btn{margin-left:auto; padding:10px 15px; font-size:.87rem; white-space:nowrap}
+    .cta-corto{display:inline}
+    .cta-largo{display:none}
+  }
+
+  .btn{display:inline-flex; align-items:center; gap:9px; border-radius:999px; padding:12px 22px; font-weight:600; font-size:.96rem; text-decoration:none; border:1px solid transparent; cursor:pointer; transition:transform .12s ease, background .15s ease, border-color .15s ease}
+  .btn:active{transform:translateY(1px)}
+  .btn-primary{background:var(--orange); color:#fff}
+  .btn-primary:hover{background:var(--orange-d)}
+  .btn-ghost{border-color:var(--line); background:#fff; color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--orange); color:var(--orange-d)}
+  .btn-light{background:#fff; color:var(--deep)}
+  .btn-outline-light{border-color:rgba(255,255,255,.35); color:#fff}
+  .btn-outline-light:hover{border-color:#fff}
+
+  /* hero oscuro */
+  .hero{background:var(--deep); color:#fff; padding:clamp(58px,7vw,96px) 0}
+  .hero h1{color:#fff}
+  .hero .eyebrow{color:var(--orange)}
+  .hero-grid{display:grid; grid-template-columns:1.12fr .88fr; gap:52px; align-items:center}
+  @media (max-width:960px){ .hero-grid{grid-template-columns:1fr; gap:38px} }
+  .hero p.lede{color:#BACAD4}
+  .hero h1 em{font-style:normal; color:var(--orange)}
+  .hero-cta{display:flex; flex-wrap:wrap; gap:12px; margin-top:28px}
+  .hero-note{margin-top:18px; font-size:.9rem; color:#8FA5B2}
+
+  .badge-box{background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14); border-radius:20px; padding:26px}
+  .badge-box h3{color:#fff; font-size:1rem; margin-bottom:16px}
+  .badge-list{list-style:none; margin:0; padding:0}
+  .badge-list li{display:flex; gap:12px; align-items:flex-start; padding:11px 0; border-bottom:1px solid rgba(255,255,255,.1); font-size:.94rem; color:#CBDAE3}
+  .badge-list li:last-child{border-bottom:0}
+  .badge-list svg{flex:none; margin-top:3px}
+  .badge-list b{color:#fff; font-weight:650}
+
+  /* cifras */
+  .figs{display:grid; grid-template-columns:repeat(4,1fr); gap:20px}
+  @media (max-width:820px){ .figs{grid-template-columns:repeat(2,1fr)} }
+  .fig{border-left:3px solid var(--orange); padding:6px 0 6px 18px}
+  .fig b{display:block; font-size:1.9rem; font-weight:700; letter-spacing:-.03em; color:var(--deep)}
+  .fig span{display:block; margin-top:4px; font-size:.9rem; color:var(--ink-2)}
+
+  /* servicios */
+  .svc{display:grid; grid-template-columns:repeat(2,1fr); gap:22px; margin-top:38px}
+  @media (max-width:840px){ .svc{grid-template-columns:1fr} }
+  .svc-card{background:#fff; border:1px solid var(--line); border-radius:16px; padding:24px; box-shadow:var(--shadow)}
+  .svc-card h3{color:var(--deep); margin-bottom:8px}
+  .svc-card p{color:var(--ink-2); font-size:.96rem}
+  .svc-tag{display:inline-block; font-size:.7rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--orange-d); background:var(--orange-soft); padding:4px 10px; border-radius:999px; margin-bottom:12px}
+  .svc-group{margin-top:46px}
+  .svc-group>h3{font-size:.8rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3); padding-bottom:10px; border-bottom:1px solid var(--line)}
+
+  /* razones */
+  .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:26px; margin-top:38px}
+  @media (max-width:900px){ .grid3{grid-template-columns:1fr} }
+  .reason h3{margin-bottom:8px; color:var(--deep)}
+  .reason p{color:var(--ink-2); font-size:.97rem}
+  .reason .num{display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px; border-radius:10px; background:var(--orange); color:#fff; font-weight:700; font-size:.92rem; margin-bottom:12px}
+
+  .dark{background:var(--deep-2); color:#fff}
+  .dark h2{color:#fff}
+  .dark p{color:#BACAD4}
+  .dark .eyebrow{color:var(--orange)}
+
+  details{border-bottom:1px solid var(--line); padding:18px 0}
+  summary{cursor:pointer; font-weight:600; list-style:none; display:flex; justify-content:space-between; gap:16px; align-items:center}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+"; color:var(--orange); font-size:1.4rem; font-weight:400; line-height:1}
+  details[open] summary::after{content:"–"}
+  details p{margin-top:12px; color:var(--ink-2); font-size:.97rem}
+
+  .contact-grid{display:grid; grid-template-columns:.95fr 1.05fr; gap:48px; align-items:start}
+  @media (max-width:900px){ .contact-grid{grid-template-columns:1fr; gap:34px} }
+  form{background:#fff; border:1px solid var(--line); border-radius:18px; padding:26px; box-shadow:var(--shadow)}
+  .field{margin-bottom:16px}
+  .field label{display:block; font-size:.85rem; font-weight:600; margin-bottom:6px; color:var(--ink-2)}
+  .field input,.field select,.field textarea{width:100%; border:1px solid var(--line); border-radius:10px; padding:11px 13px; font:inherit; font-size:.96rem; background:#fff; color:var(--ink)}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--orange); outline-offset:1px; border-color:var(--orange)}
+  .consent{display:flex; gap:10px; align-items:flex-start; font-size:.83rem; color:var(--ink-2); line-height:1.5; margin-bottom:18px}
+  .consent input{margin-top:3px; flex:none}
+  .form-msg{margin-top:14px; font-size:.9rem; padding:12px 14px; border-radius:10px; background:var(--orange-soft); color:#7A3505; display:none}
+
+  footer{background:var(--deep); color:#B7C7D1; padding:44px 0 34px; font-size:.92rem}
+  .foot-grid{display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:32px}
+  @media (max-width:760px){ .foot-grid{grid-template-columns:1fr; gap:24px} }
+  footer h4{margin:0 0 10px; font-size:.78rem; letter-spacing:.11em; text-transform:uppercase; color:#7E96A4; font-weight:650}
+  footer a{text-decoration:none}
+  footer a:hover{color:var(--orange)}
+  footer ul{list-style:none; margin:0; padding:0}
+  footer li{margin-bottom:6px}
+  footer .logo{color:#fff}
+  .legal{margin-top:34px; padding-top:20px; border-top:1px solid rgba(255,255,255,.12); font-size:.83rem; color:#7E96A4}
+
+  .wa-float{position:fixed; right:18px; bottom:18px; z-index:60; width:56px; height:56px; border-radius:50%; background:#25D366; display:grid; place-items:center; box-shadow:0 6px 20px rgba(0,0,0,.22); text-decoration:none}
+  .banner-prev{background:#FFF4E5; border-bottom:1px solid #F0D5AC; color:#6B4A10; font-size:.85rem; padding:9px 0; text-align:center}
+</style>
+</head>
+<body>
+
+<div class="banner-prev">Versión paralela de prueba — el sitio actual en bingenieria.cl no se toca. Construida por la Clínica del Marketing el 10 de septiembre de 2026.</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#142833"/><path d="M11 8h7a4.5 4.5 0 010 9h-7zM11 17h7.6a4.7 4.7 0 010 9.4H11z" fill="#FF6514"/></svg>
+      <span>B Ingeniería <i>· Grupo Biomédica</i></span>
+    </a>
+    <nav>
+      <a href="#servicios">Servicios</a>
+      <a href="#razones">Por qué nosotros</a>
+      <a href="#respaldo">Respaldo</a>
+      <a href="#faq">Preguntas</a>
+    </nav>
+    <a class="btn btn-primary" href="#contacto"><span class="cta-largo">Solicitar visita</span><span class="cta-corto">Contactar</span></a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="stack">
+      <p class="eyebrow">Mantenimiento y operación · Todo Chile</p>
+      <h1>Si sostenemos un pabellón, <em>sostenemos tu planta.</em></h1>
+      <p class="lede">Llevamos desde 2007 manteniendo el equipamiento crítico de hospitales y clínicas, donde una falla no admite espera. Esa misma disciplina la aplicamos hoy a la industria: mantenimiento multimarca, personal técnico propio y atención 24/7 los 365 días del año.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#contacto">Solicitar visita técnica</a>
+        <a class="btn btn-outline-light" href="#servicios">Ver servicios</a>
+      </div>
+      <p class="hero-note">Sistema de gestión certificado ISO 9001:2015 · Inscritos en ChileProveedores y SICEP</p>
+    </div>
+
+    <div class="badge-box">
+      <h3>Lo que su área de abastecimiento va a pedirle</h3>
+      <ul class="badge-list">
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FF6514" stroke-width="3"><path d="M4 12.5l5.5 5.5L20 7"/></svg><span><b>ISO 9001:2015 vigente</b> — sistema de gestión certificado, con documentación auditable de cada intervención.</span></li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FF6514" stroke-width="3"><path d="M4 12.5l5.5 5.5L20 7"/></svg><span><b>ChileProveedores y SICEP</b> — registros al día para licitar y para pasar evaluación de proveedores.</span></li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FF6514" stroke-width="3"><path d="M4 12.5l5.5 5.5L20 7"/></svg><span><b>Cumplimiento laboral acreditable</b> — la Ley 20.123 lo hace solidariamente responsable de su contratista. Entregamos la documentación que lo respalda.</span></li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FF6514" stroke-width="3"><path d="M4 12.5l5.5 5.5L20 7"/></svg><span><b>Un solo contrato</b> — mantenimiento, personal, insumos y obra civil con una contraparte y un responsable.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="figs">
+      <div class="fig"><b>2007</b><span>Operando sin interrupción</span></div>
+      <div class="fig"><b>45+</b><span>Rubros e industrias atendidas</span></div>
+      <div class="fig"><b>35+</b><span>Contratos activos</span></div>
+      <div class="fig"><b>24/7</b><span>Los 365 días del año</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="servicios" style="background:var(--grey); border-block:1px solid var(--line)">
+  <div class="wrap">
+    <p class="eyebrow">Servicios</p>
+    <h2>Ocho servicios que se contratan por separado o como una sola operación.</h2>
+    <p class="lede" style="max-width:68ch; margin-top:14px">La mayoría de nuestros clientes empieza con uno y termina con varios. No porque se lo vendamos, sino porque coordinar cuatro proveedores distintos para sostener una misma instalación termina costando más que el servicio.</p>
+
+    <div class="svc-group">
+      <h3>Mantenimiento</h3>
+      <div class="svc">
+        <div class="svc-card">
+          <span class="svc-tag">Industrial</span>
+          <h3>Mantenimiento de equipos industriales</h3>
+          <p>Servicio técnico multimarca con mantenciones programadas y atención de emergencias 24/7. Plantas, calderas y equipos térmicos, plantas de osmosis y tratamiento de agua, tableros y salas de máquinas.</p>
+        </div>
+        <div class="svc-card">
+          <span class="svc-tag">Clínico</span>
+          <h3>Mantenimiento de equipos médicos</h3>
+          <p>Apoyo integral a la operación de centros hospitalarios: servicios técnicos, administrativos y profesionales bajo estándares de alta exigencia, con la trazabilidad que exige la acreditación de prestadores.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-group">
+      <h3>Personal y abastecimiento</h3>
+      <div class="svc">
+        <div class="svc-card">
+          <span class="svc-tag">Personas</span>
+          <h3>Outsourcing de personal</h3>
+          <p>Externalización de personal técnico, profesional y administrativo. Equipos especializados que apoyan la operación de distintas áreas: bodegas, farmacia, OIRS, unidades de calidad y gestión de demanda.</p>
+        </div>
+        <div class="svc-card">
+          <span class="svc-tag">Insumos</span>
+          <h3>Provisión de insumos y repuestos</h3>
+          <p>Disponibilidad oportuna con precio preferente, control de inventario y modalidad <strong>vitrina in house</strong>: el stock queda en su instalación y usted paga solo lo que consume.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-group">
+      <h3>Infraestructura y soporte</h3>
+      <div class="svc">
+        <div class="svc-card">
+          <span class="svc-tag">Obra</span>
+          <h3>Obras civiles</h3>
+          <p>Construcción, remodelación y habilitación de espacios: adecuaciones interiores, montaje de infraestructura, instalaciones técnicas y obras complementarias.</p>
+        </div>
+        <div class="svc-card">
+          <span class="svc-tag">Equipos</span>
+          <h3>Venta y arriendo de equipos</h3>
+          <p>Sistemas de seguridad eléctrica, ventilación, desfibrilación, incubadoras, electrobisturí y otros equipos técnicos. En arriendo, disponibilidad a requerimiento para sostener la continuidad mientras un equipo está fuera de servicio.</p>
+        </div>
+        <div class="svc-card">
+          <span class="svc-tag">Logística</span>
+          <h3>Logística y transporte</h3>
+          <p>Traslado de carga, transporte de personas y arriendo de vehículos, con trazabilidad y apoyo a operaciones y proyectos.</p>
+        </div>
+        <div class="svc-card" style="background:var(--deep); border-color:var(--deep)">
+          <span class="svc-tag" style="background:rgba(255,101,20,.18); color:#FFB183">Grupo</span>
+          <h3 style="color:#fff">¿Necesita equipamiento de imagenología?</h3>
+          <p style="color:#BACAD4">Eso lo ve Medical Market, del mismo grupo: ecógrafos, rayos X, mamógrafos, tomógrafos y resonadores, con instalación y servicio técnico propio.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="razones">
+  <div class="wrap">
+    <p class="eyebrow">Por qué nosotros</p>
+    <h2>Tres cosas que cambian cuando el proveedor es multimarca y tiene gente propia.</h2>
+
+    <div class="grid3">
+      <div class="reason">
+        <span class="num">1</span>
+        <h3>Multimarca, sin atadura</h3>
+        <p>No representamos a un fabricante, así que no tenemos incentivo para empujarle un reemplazo cuando la reparación alcanza. Mantenemos lo que ya tiene instalado, sea de la marca que sea.</p>
+      </div>
+      <div class="reason">
+        <span class="num">2</span>
+        <h3>24/7 real, no un teléfono</h3>
+        <p>Atención programada y de emergencia los 365 días del año. En hospitales aprendimos que la continuidad no se negocia: un equipo detenido a las tres de la mañana es un problema de esa misma noche.</p>
+      </div>
+      <div class="reason">
+        <span class="num">3</span>
+        <h3>Documentación auditable</h3>
+        <p>Cada intervención queda registrada bajo el sistema de gestión ISO 9001:2015. Eso es lo que necesita para su acreditación, su auditoría interna o su evaluación de proveedores.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="respaldo">
+  <div class="wrap">
+    <p class="eyebrow">Respaldo</p>
+    <h2 style="max-width:24ch">Parte del Grupo Biomédica, con presencia operativa en todo Chile.</h2>
+    <p class="lede" style="max-width:66ch; margin-top:16px">B Ingeniería opera junto a Medical Market (equipamiento de imagenología), FEDEMI Medical (insumos clínicos) y APO (administración de operaciones). Cuando un proyecto necesita equipo, obra civil, personal y mantenimiento a la vez, el grupo lo cubre completo sin subcontratar a terceros.</p>
+    <div class="hero-cta">
+      <a class="btn btn-light" href="#contacto">Conversemos su caso</a>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="background:var(--grey); border-block:1px solid var(--line)">
+  <div class="wrap" style="max-width:820px">
+    <p class="eyebrow">Preguntas frecuentes</p>
+    <h2>Lo que preguntan antes de contratar.</h2>
+    <div style="margin-top:30px">
+      <details>
+        <summary>¿Atienden emergencias fuera de horario?</summary>
+        <p>Sí. Tenemos atención programada y atención de emergencias con disponibilidad 24/7 los 365 días del año, para responder ante requerimientos críticos y sostener la continuidad de la operación.</p>
+      </details>
+      <details>
+        <summary>¿En qué regiones operan?</summary>
+        <p>Tenemos presencia operativa a nivel nacional y una red de convenios que nos permite entregar soporte técnico en distintas regiones del país. Cuéntenos dónde está su instalación y le confirmamos el equipo que lo atendería.</p>
+      </details>
+      <details>
+        <summary>Trabajan mucho con salud. ¿Sirven para una planta industrial?</summary>
+        <p>Sí, y es precisamente el argumento: el equipamiento hospitalario tiene la exigencia de continuidad más alta que existe, porque una falla afecta a un paciente. Los mismos procedimientos, la misma certificación y el mismo personal técnico se aplican a equipos industriales. Nuestro servicio industrial es multimarca y cubre plantas, calderas, tratamiento de agua, tableros y salas de máquinas.</p>
+      </details>
+      <details>
+        <summary>¿Se puede contratar un servicio puntual, sin contrato anual?</summary>
+        <p>Sí. Trabajamos con contratos por período definido y también con servicios puntuales. Muchos clientes parten con una mantención puntual y evalúan desde ahí.</p>
+      </details>
+      <details>
+        <summary>¿Qué documentación entregan para cumplimiento laboral?</summary>
+        <p>La que exige la Ley 20.123 sobre responsabilidad solidaria: certificados de cumplimiento de obligaciones laborales y previsionales, afiliación a mutualidad y pólizas vigentes. Se la entregamos con la periodicidad que su área de abastecimiento defina.</p>
+      </details>
+      <details>
+        <summary>¿Cómo pido una cotización?</summary>
+        <p>Complete el formulario o escríbanos a ventas@bingenieria.cl. Para servicios de mantenimiento partimos con una visita técnica: sin ver la instalación, cualquier precio es una adivinanza.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="wrap contact-grid">
+    <div class="stack">
+      <p class="eyebrow">Contacto</p>
+      <h2>Partamos por una visita técnica.</h2>
+      <p class="lede">Vamos a ver su instalación, levantamos el estado de los equipos y le entregamos una propuesta con alcance y precio cerrados. Sin costo y sin compromiso.</p>
+      <div style="margin-top:26px" class="stack">
+        <p><strong>Ventas</strong><br><a href="mailto:ventas@bingenieria.cl" style="color:var(--orange-d); text-decoration:none">ventas@bingenieria.cl</a></p>
+        <p><strong>Teléfono</strong><br><a href="tel:+56957818943" style="color:var(--orange-d); text-decoration:none">+56 9 5781 8943</a></p>
+        <p><strong>Oficina</strong><br>Av. Colón 2644, Valparaíso · Cobertura nacional</p>
+        <p><strong>Emergencias</strong><br>24/7, los 365 días del año</p>
+      </div>
+    </div>
+
+    <form id="lead" novalidate>
+      <div class="field">
+        <label for="f-nombre">Nombre y apellido</label>
+        <input id="f-nombre" name="nombre" type="text" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="f-emp">Empresa o institución</label>
+        <input id="f-emp" name="empresa" type="text" autocomplete="organization" required>
+      </div>
+      <div class="field">
+        <label for="f-mail">Correo</label>
+        <input id="f-mail" name="correo" type="email" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <label for="f-tel">Teléfono</label>
+        <input id="f-tel" name="telefono" type="tel" autocomplete="tel">
+      </div>
+      <div class="field">
+        <label for="f-svc">Servicio que necesita</label>
+        <select id="f-svc" name="servicio" required>
+          <option value="">Seleccione…</option>
+          <option>Mantenimiento de equipos industriales</option>
+          <option>Mantenimiento de equipos médicos</option>
+          <option>Outsourcing de personal</option>
+          <option>Insumos y repuestos</option>
+          <option>Obras civiles</option>
+          <option>Venta o arriendo de equipos</option>
+          <option>Logística y transporte</option>
+          <option>Más de uno / no estoy seguro</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="f-msg">Cuéntenos brevemente</label>
+        <textarea id="f-msg" name="mensaje" rows="4" placeholder="Tipo de instalación, cantidad de equipos, ubicación, urgencia."></textarea>
+      </div>
+      <label class="consent">
+        <input type="checkbox" name="consentimiento" required>
+        <span>Autorizo a B Ingeniería SpA a contactarme para responder esta solicitud y a tratar mis datos con esa finalidad, conforme a la Ley 21.719. Puedo pedir su eliminación escribiendo a ventas@bingenieria.cl.</span>
+      </label>
+      <button class="btn btn-primary" type="submit" style="width:100%; justify-content:center">Solicitar visita técnica</button>
+      <div class="form-msg" id="msg"></div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="#top" style="margin-bottom:12px">
+          <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#FF6514"/><path d="M11 8h7a4.5 4.5 0 010 9h-7zM11 17h7.6a4.7 4.7 0 010 9.4H11z" fill="#142833"/></svg>
+          <span>B Ingeniería</span>
+        </a>
+        <p style="margin-top:10px; max-width:40ch">Gestión y operación de servicios técnicos industriales y hospitalarios. Parte del Grupo Biomédica, operando desde 2007.</p>
+      </div>
+      <div>
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="#servicios">Mantenimiento industrial</a></li>
+          <li><a href="#servicios">Mantenimiento médico</a></li>
+          <li><a href="#servicios">Outsourcing de personal</a></li>
+          <li><a href="#servicios">Insumos y repuestos</a></li>
+          <li><a href="#servicios">Obras civiles</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:ventas@bingenieria.cl">ventas@bingenieria.cl</a></li>
+          <li><a href="tel:+56957818943">+56 9 5781 8943</a></li>
+          <li>Av. Colón 2644, Valparaíso</li>
+          <li><a href="https://www.linkedin.com/company/biomedica-ingenier%C3%ADa/" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="legal">
+      B Ingeniería SpA · RUT 76.011.347-6 · Av. Colón 2644, Valparaíso, Chile.<br>
+      Sistema de gestión certificado ISO 9001:2015, alcance mantenimiento industrial y de equipamiento médico.
+    </p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('lead').addEventListener('submit', function(e){
+    e.preventDefault();
+    var m = document.getElementById('msg');
+    m.style.display = 'block';
+    m.textContent = 'Esta es una versión de prueba: el formulario todavía no está conectado al CRM. Cuando se conecte a Bitrix24, cada solicitud entrará directo al pipeline. Por ahora, escríbanos a ventas@bingenieria.cl o al +56 9 5781 8943.';
+  });
+</script>
+
+</body>
+</html>
